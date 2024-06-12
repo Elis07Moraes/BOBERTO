@@ -51,7 +51,7 @@ while distancia > 100:
     motor_e.paraMotorLentamente()
 
 # seguir linha
-base.moverSemParar(velocidade=100, angulo_curvatura=0)
+#  base.moverSemParar(velocidade=100, angulo_curvatura=0)
 
 
 # WHILE TRUE
