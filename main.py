@@ -38,7 +38,7 @@ distancia = 1000
 
 # FUNÇÕES
 
-angulo_verificar = 160
+angulo_verificar = 170
 
 def VerificarCorVE():
     return sensor_vendra.read(0)[1] 
