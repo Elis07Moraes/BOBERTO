@@ -1,8 +1,7 @@
 #!/usr/bin/env pybricks-micropython
 
 # script.py
-from titas_lib import HubType, RoboHub,SeguidorLinha, RoboBrick, RoboMotor, RoboCor, RoboUltrassonico, RoboBase
-# from pybricks.iodevices import LUMPDevices
+from titas_lib import HubType, RoboHub, SeguidorLinha, RoboBrick, RoboMotor, RoboCor, RoboUltrassonico, RoboBase, RoboImports
 
 # DEFINIÇÕES
  
@@ -19,12 +18,12 @@ cor_esquerda = RoboCor(Port="3")
 motor_d = RoboMotor(Port="d")
 motor_e = RoboMotor(Port="a")
 
+sensorLinha = type.getImports().getLUMPDevice(port="2") 
+
 codigoSeguidor = SeguidorLinha()
 
-# sensorLinha = LUMPDevice(Port.S2)
 
-
-# print sensorLinha.read(0)[0] 
+sensorLinha.read(0)[0]
 
 base = RoboBase(  # passando as informações do robo p uma variavel
     motorDireito= motor_d,
@@ -69,8 +68,8 @@ while True:
 
     else: 
         codigoSeguidor.seguirLinhaPreta(
-    kd=1,
-    kp=2,
+    kd=10,
+    kp=8,
     cor_vermelha_direta=cor_direita.pegarCor(),
     cor_vermelha_esquerda=cor_esquerda.pegarCor(),
     motor_direito=motor_d,
