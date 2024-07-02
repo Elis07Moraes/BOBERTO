@@ -38,7 +38,7 @@ distancia = 1000
 
 # FUNÇÕES
 
-angulo_verificar = 170
+angulo_verificar = 180
 
 def VerificarCorVE():
     return sensor_vendra.read(0)[1] 
@@ -46,7 +46,36 @@ def VerificarCorVE():
 def VerificarCorVD():
     return sensor_vendra.read(0)[2]
 
-def VerificarGap():
+# def VerificarGap():
+#     print("VerificarGap")
+#     base.virarAngulo(angulo=angulo_verificar)
+    
+#     while angulo_verificar <= 180:
+#         print("virarAngulo")
+#     VerificarCorVD()
+    
+#     if VerificarCorVD() < 30 or VerificarCorVE() < 30:
+#                     print("deu false") 
+#     base.pararMotores()
+#     print("pararMotorInstantaneamente")
+#     return False
+# print("entrou aqui")
+
+# while angulo_verificar <= 2*angulo_verificar:
+#     if VerificarCorVD() < 30 or VerificarCorVE() < 30:
+#         print("deu false") 
+#     return False
+#     print("entrou aqui")
+    
+#     base.virarAngulo(angulo=-2* angulo_verificar)
+#     base.pararMotores()
+#     if VerificarCorVD() < 30 or VerificarCorVE() < 30: 
+#         return False
+    
+#     base.virarAngulo(angulo=angulo_verificar)
+    return True
+
+def VerificarGap(): # consertar aqui, colocar para verificar enquanto vira
     print("VerificarGap")
     base.virarAngulo(angulo=angulo_verificar)
     print("virarAngulo")
