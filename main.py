@@ -1096,10 +1096,11 @@ def alinharesq(valor:float): #Função que se allinha na quina esquerda (area de
         if (andarvira() == True): 
             return True
         
-        if PrataVoltar() == True: 
-            base.moverDistancia(-117)
-            base.pararMotores()
-            alinharDir()
+        # if PrataVoltar() == True: 
+        #     beep(200, 200)
+        #     base.moverDistancia(-117)
+        #     base.pararMotores()
+        #     alinharDir()
         
     print("saida")
     seguindoLinha = True
@@ -1168,10 +1169,10 @@ def alinharDir(valor:float): #Função que se allinha na quina direita
         if (andarvira() == True): 
             return True
         
-        if PrataVoltar() == True:
-            base.moverDistancia(-117)
-            base.pararMotores()
-            alinharDir()
+        # if PrataVoltar() == True:
+        #     base.moverDistancia(-117)
+        #     base.pararMotores()
+        #     alinharDir()
         
     print("saida")
     seguindoLinha = True
